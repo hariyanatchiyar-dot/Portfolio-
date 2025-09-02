@@ -1,0 +1,215 @@
+/* ---------------------------
+
+   Base & layout
+
+   --------------------------- */
+
+:root{
+
+  --sandal: #f3e5ab;
+
+  --sandal-strong: #e6c96a;
+
+  --accent: #2c3e50;
+
+  --muted:#6b6b6b;
+
+  --card-bg: #ffffff;
+
+}
+
+*{box-sizing:border-box}
+
+html,body{height:100%}
+
+body{
+
+  margin:0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  background: var(--sandal);
+
+  color:var(--accent);
+
+  -webkit-font-smoothing:antialiased;
+
+  -moz-osx-font-smoothing:grayscale;
+
+  line-height:1.5;
+
+  scroll-behavior: smooth;
+
+}
+
+/* Container helper */
+
+.container{width:92%;max-width:1100px;margin:0 auto}
+
+/* Hero */
+
+.hero{
+
+  padding:56px 0 28px;
+
+  background: linear-gradient(180deg,#fff9e6 0%, #fff4d1 100%);
+
+  text-align:center;
+
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+
+}
+
+.hero-inner{max-width:920px;margin:0 auto;padding:6px}
+
+.hero-hi{font-size:clamp(1.6rem,3.2vw,2rem);margin:0 0.2rem}
+
+.name{color:var(--accent);font-weight:800}
+
+.hero-welcome{font-size:clamp(1.1rem,2.2vw,1.4rem);margin:.25rem 0;color:var(--muted)}
+
+.hero-quote{margin:.5rem 0 1rem;color:var(--muted)}
+
+/* CTA + scroll */
+
+.hero-cta-row{display:flex;gap:.6rem;justify-content:center;align-items:center}
+
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem .9rem;border-radius:10px;border:none;background:var(--card-bg);color:var(--accent);font-weight:700;text-decoration:none;box-shadow:6px 8px 18px rgba(0,0,0,0.08);cursor:pointer}
+
+.btn.primary{background:var(--sandal-strong)}
+
+.btn.ghost{background:transparent;border:2px solid rgba(0,0,0,0.06)}
+
+.scroll-cue{font-size:1.05rem;color:var(--muted);margin-left:.4rem}
+
+/* Top nav */
+
+.top-nav{background:transparent;padding:8px 0}
+
+.nav-list{list-style:none;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;padding:8px 0;margin:0}
+
+.nav-list a{color:var(--accent);text-decoration:none;font-weight:700;padding:.4rem .6rem;border-radius:8px}
+
+.nav-list a:hover{background:rgba(0,0,0,0.03)}
+
+/* Section general */
+
+.section{padding:36px 0}
+
+.section .section-title{text-align:center;margin:0 0 18px;font-size:1.4rem;color:var(--accent)}
+
+.muted{color:var(--muted);text-align:center;margin-bottom:8px}
+
+/* Card (3D) */
+
+.card{
+
+  background:var(--card-bg);
+
+  border-radius:14px;
+
+  padding:20px;
+
+  box-shadow:8px 10px 24px rgba(0,0,0,0.12), -6px -6px 14px rgba(255,255,255,0.6);
+
+  transition:transform .32s cubic-bezier(.2,.9,.2,1), box-shadow .32s;
+
+  text-align:center;
+
+}
+
+.card:hover{transform:translateY(-10px) rotateX(4deg);box-shadow:20px 24px 40px rgba(0,0,0,0.16), -8px -8px 18px rgba(255,255,255,0.6)}
+
+/* About layout */
+
+.about-grid{display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center}
+
+.profile-pic{width:160px;height:160px;border-radius:50%;object-fit:cover;border:6px solid #EEDC82;box-shadow:8px 10px 20px rgba(0,0,0,0.12)}
+
+.about-text{max-width:680px;text-align:left}
+
+@media(max-width:720px){.about-text{text-align:center}}
+
+/* Grids (cards) */
+
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:12px}
+
+.edu-card .icon, .course-card .icon, .hobby-card .icon{font-size:1.6rem;margin-bottom:10px}
+
+/* Skill cards specific */
+
+.skill-card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;min-height:92px;font-weight:700}
+
+.skill-icon{font-size:1.6rem;margin-bottom:10px}
+
+/* Colorful icons */
+
+.icon.cap{color:#4a90e2}
+
+.icon.school{color:#e67e22}
+
+.icon.flag{color:#27ae60}
+
+.skill-icon.code{color:#9b59b6}
+
+.skill-icon.bulb{color:#f1c40f}
+
+.skill-icon.chat{color:#2980b9}
+
+.skill-icon.team{color:#e67e22}
+
+.skill-icon.adapt{color:#16a085}
+
+.icon.invoice{color:#d35400}
+
+.icon.lang{color:#c0392b}
+
+.icon.db{color:#16a085}
+
+.icon.plane{color:#3498db}
+
+.icon.cook{color:#e67e22}
+
+.icon.write{color:#8e44ad}
+
+.icon.walk{color:#2ecc71}
+
+/* Resume */
+
+.resume-wrap{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:12px}
+
+.resume-image{width:360px;max-width:95%;border-radius:10px;border:2px solid rgba(0,0,0,0.06);box-shadow:6px 8px 18px rgba(0,0,0,0.12)}
+
+/* Contact layout */
+
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:10px}
+
+.contact-card{display:flex;gap:12px;align-items:flex-start}
+
+.contact-icon{font-size:1.4rem;color:var(--accent);margin-top:3px}
+
+.contact-link{font-weight:700;color:var(--accent);text-decoration:none}
+
+.contact-actions{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+
+.contact-form{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+
+.contact-form input,.contact-form textarea{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.09)}
+
+.form-actions{display:flex;justify-content:flex-end}
+
+/* Toast */
+
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--accent);color:#fff;padding:.6rem .9rem;border-radius:10px;opacity:0;pointer-events:none;display:flex;gap:.5rem;align-items:center;transition:all .25s}
+
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* Footer */
+
+.site-footer{background:transparent;padding:18px;text-align:center;color:var(--muted);margin-top:18px;border-top:1px solid rgba(0,0,0,0.04)}
+
+/* Responsive tweaks */
+
+@media(max-width:900px){.cards-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}}
+
+@media(max-width:600px){.hero-inner{padding:0 12px}.profile-pic{width:130px;height:130px}}
